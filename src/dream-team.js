@@ -18,9 +18,8 @@ function createDreamTeam(members) {
   if (Array.isArray(members)) {
     members.forEach(element => {
       if (typeof element == 'string') {
-        let word = element.split('');
         let spaceArr = [];
-        word.forEach(elem => {
+        element.split('').forEach(elem => {
           if (elem !== ' ') {
             spaceArr.push(elem);
           }
@@ -33,18 +32,6 @@ function createDreamTeam(members) {
   }
   return arr.sort().join('');
 }
-
-createDreamTeam(['amelia',
-'ruby',
-'lily',
-'grace',
-'millie',
-'daisy',
-'freya',
-'erin',
-'megan',
-'jasmine',
-'brooke']);
 
 module.exports = {
   createDreamTeam
